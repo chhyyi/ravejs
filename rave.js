@@ -5,6 +5,7 @@ let isRecording = false;
 let stream = null;
 let recorder = null;
 let chunks = [];
+var outputFileForVisualizer;
 
 // ENABLING AUDIO CONTEXT
 const enableAudioCtx = () => {
@@ -53,6 +54,7 @@ const toogleRecording = async () => {
   } else {
     recordButton.value = "Record from microphone";
     isRecording = false;
+    document.getElementById("fileLoaded").textContent="Record from microphone"
     recorder.stop();
     stream.getTracks().forEach((track) => track.stop());
   }
@@ -77,6 +79,11 @@ const loadUploadedFile = () => {
     });
   };
   reader1.readAsArrayBuffer(fileInput.files[0]);
+
+  //show loaded file name
+  const files = fileInput.files;
+  const sourceText=files.item(0).name
+  document.getElementById("fileLoaded").textContent=sourceText;
 };
 
 const loadCantina = async () => {
@@ -89,6 +96,7 @@ const loadCantina = async () => {
   inputBuffer = buffer;
   playButton.disabled = false;
   ravifyButton.disabled = false;
+  document.getElementById("fileLoaded").textContent='default sample';
 };
 
 const urlToBuffer = async (url) => {
@@ -166,3 +174,4 @@ const raveForward = async (buffer) => {
   ravifyButton.disabled = false;
   return audio_out;
 };
+

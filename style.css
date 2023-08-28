@@ -92,3 +92,13 @@ input[type=button]:disabled{
   background-color: #c0c0c0;
   color: rgb(123, 123, 123);
 }
+
+audio {
+  display: inline-block;
+  height: 40px;
+}
+
+canvas {
+  display: inline-box;
+  width: 100%;
+}

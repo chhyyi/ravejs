@@ -4,6 +4,10 @@
     <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.15.0/dist/ort.min.js"></script>
     <script src="buffer_to_wav.js"></script>
     <script src="rave.js"></script>
+
+    <!--audiovisualizer from https://github.com/hvianna/audioMotion-analyzer-->
+    <script type="module" src="./audioMotionAnalyzer.js"></script>
+
     <title>RAVE.js - RAVE online timbre transfer</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="favicon.png" />
@@ -53,6 +57,8 @@
           value="Record from microphone"
           onclick="toogleRecording();"
         />
+        <h3>Current Audio Source:</h3>
+        <p id="fileLoaded">None</p>
       </div>
 
       <div class="section">
@@ -96,11 +102,22 @@
       </div>
       <p class="info">
         * We do not store any of your data, everything is processed locally on
-        your computer !
-      </p>
-      <p class="info">
+        your computer.
         <a href="https://github.com/caillonantoine/ravejs">original ravejs by caillonantoine(github)</a>
       </p>
+      
+    </div>
+    
+    <!-- analyzer container -->
+    <div class="section">
+      <div id="container"></div>
+      <audio id="audio" controls crossorigin></audio>
+      <div class="flexRow">
+        <input id="play_vis_input" type="button" value="Play input" ></input>
+        <input id="play_vis_output" type="button" value="Play output" ></input>
+      </div>
+
+      <div class="info"><a href="https://audiomotion.dev">audioMotion-analyzer</a> <span id="version"></span></div>
     </div>
   </body>
 </html>

@@ -61,8 +61,12 @@ function bufferToWave(abuffer, len) {
 function make_download(abuffer, total_samples) {
   var new_file = URL.createObjectURL(bufferToWave(abuffer, total_samples));
 
+  //assign to give the output file url to oaudiovisualizer...
+  outputFileForVisualizer = new_file;
+
   var download_link = document.getElementById("download_link");
   download_link.href = new_file;
   download_link.download = "rave_render.wav";
   download_link.innerText = "Download result";
+  return new_file;
 }
