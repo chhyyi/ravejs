@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 101.61">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        fill: #231f20;
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 53px;
+      }
+
+      .cls-3 {
+        letter-spacing: -.02em;
+      }
+    </style>
+  </defs>
+  <text class="cls-2" transform="translate(0 44.36)"><tspan class="cls-3" x="0" y="0">P</tspan><tspan x="26.87" y="0">ebbles </tspan><tspan class="cls-1" x="185.02" y="0">t</tspan><tspan x="202.25" y="0">o Clouds</tspan></text>
+</svg>

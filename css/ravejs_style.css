@@ -1,0 +1,108 @@
+:root {
+  --default-gap: 10px;
+  --double-gap: 20px;
+  --bg-color: #ffffff;
+  --border-color: #6272a4;
+  --fg-color: #282a36;
+}
+
+/*
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('Roboto-Light.ttf') format("truetype");
+}
+
+body {
+  font-family: 'Roboto-Light';
+  color: var(--fg-color);
+  background-color: var(--bg-color);
+  padding-top: var(--default-gap);
+}
+
+h1 {
+  font-size: 42px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+h2 {
+  font-size: 28px;
+  margin: 0px;
+  margin-bottom: 15px;
+}
+
+.info {
+  font-size: 16px;
+}
+*/
+
+.content_rave {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 15px;
+  height: 90vh;
+  z-index: 3;
+}
+
+.section_rave {
+  /*border-top: 5px dashed black;*/
+  padding: 10px;
+  width: min(100%, 500px);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: var(--default-gap);
+  z-index: 3;
+}
+
+.left .section_rave {
+  margin-left: 0;
+}
+
+.right .section_rave {
+  margin-right: 0;
+}
+
+.flexRow {
+  display: flex;
+  gap: var(--default-gap);
+}
+
+.group {
+  border: 2px dashed black;
+  padding: var(--default-gap);
+}
+
+input[type="button"] {
+  transition-duration: 0.2s;
+}
+
+input[type="button"],
+select {
+  background-color: #b85798;
+  border: none;
+  color: #1a1a1a;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "IBMPlexSans", serif;
+  font-weight: 600;
+}
+
+input[type="button"]:hover {
+  background-color: #989bdb;
+  color: white;
+}
+
+input[type="button"]:disabled {
+  background-color: #c0c0c0;
+  color: rgb(123, 123, 123);
+}
